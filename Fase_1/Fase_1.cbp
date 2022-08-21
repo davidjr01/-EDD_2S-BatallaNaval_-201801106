@@ -34,7 +34,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/LArticulo.h" />
+		<Unit filename="include/LCategoria.h" />
 		<Unit filename="include/LDobleUsuario.h" />
+		<Unit filename="include/NodoArticulo.h" />
+		<Unit filename="include/NodoCategoria.h" />
 		<Unit filename="include/NodoUsuario.h" />
 		<Unit filename="include/nlohmann/adl_serializer.hpp" />
 		<Unit filename="include/nlohmann/byte_container_with_subtype.hpp" />
@@ -81,6 +85,8 @@
 		<Unit filename="include/nlohmann/thirdparty/hedley/hedley.hpp" />
 		<Unit filename="include/nlohmann/thirdparty/hedley/hedley_undef.hpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/LArticulo.cpp" />
+		<Unit filename="src/LCategoria.cpp" />
 		<Unit filename="src/LDobleUsuario.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
