@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1661069998 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\main.cpp
+1661076702 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\main.cpp
 	<iostream>
 	<stdlib.h>
 	<conio.h>
@@ -7,4 +7,10 @@
 	<windows.h>
 	<sstream>
 	<fstream>
+
+1661077086 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\nodousuario.cpp
+
+1661077080 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\nodousuario.h
+	<iostream>
+	<string>
 

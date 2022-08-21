@@ -16,7 +16,22 @@ int  MenuPrincipal();
 void titulo();
 
 int main(){
-    MenuPrincipal();
+
+    int op;
+    do
+    {
+        op = MenuPrincipal();
+        switch (op)
+        {
+            case 0: cout<<"holamundo" <<endl; getch(); break;
+            case 1:  break;  /*Estudiantes->graficar(); getch();*/
+            case 2:  break;
+            case 3:  break;
+            case 4: break;
+        }
+    } while (op != 4);
+
+    return 0;
 
 }
 void clear()
@@ -33,14 +48,19 @@ void gotoxy(int x, int y){
     SetConsoleCursorPosition(hCon, dwPos);
 }
 
+void CargaMasiva(){
+    clear();
+
+}
+
 
 int  MenuPrincipal(){
     string m[5];
-    m[0] = "   1. asdfasdfasdf";
-    m[1] = "   2. asdfasdf";
-    m[2] = "   3. asdfasdf";
-    m[3] = "   4. asdfasdf";
-    m[4] = "   5. asdfasdfr";
+    m[0] = "   1. Carga Masiva";
+    m[1] = "   2. Registro de Usuario";
+    m[2] = "   3. Login";
+    m[3] = "   4. Reportes";
+    m[4] = "   5. Salir";
     char lec;
     int aux = 0, c, pos = 0;
     while (aux != 13)
@@ -90,7 +110,7 @@ gotoxy(9,3); cout<<"$$$$$$$\\             $$\\               $$\\ $$\\          
 gotoxy(9,4); cout<<"$$  __$$\\            $$ |              $$ |$$ |                $$$\\  $$ |                             $$ |";
 gotoxy(9,5); cout<<"$$ |  $$ | $$$$$$\\ $$$$$$\\    $$$$$$\\  $$ |$$ | $$$$$$\\        $$$$\\ $$ | $$$$$$\\ $$\\    $$\\ $$$$$$\\  $$ |";
 gotoxy(9,6); cout<<"$$$$$$$\\ | \\____$$\\\\_$$  _|   \\____$$\\ $$ |$$ | \\____$$\\       $$ $$\\$$ | \\____$$\\\\$$\\  $$  |\\____$$\\ $$ |";  ///
-gotoxy(9,7); cout<<"$$  __$$\\  $$$$$$$ | $$ |     $$$$$$$ |$$ |$$ | $$$$$$$ |      $$ \\$$$$ | $$$$$$$ |\$$\\$$  / $$$$$$$ |$$ |";
+gotoxy(9,7); cout<<"$$  __$$\\  $$$$$$$ | $$ |     $$$$$$$ |$$ |$$ | $$$$$$$ |      $$ \\$$$$ | $$$$$$$ | \$$\\$$  / $$$$$$$ |$$ |";
 gotoxy(9,8); cout<<"$$ |  $$ |$$  __$$ | $$ |$$\\ $$  __$$ |$$ |$$ |$$  __$$ |      $$ |\\$$$ |$$  __$$ | \\$$$  / $$  __$$ |$$ |";
 gotoxy(9,9); cout<<"$$$$$$$  |\\$$$$$$$ | \\$$$$  |\\$$$$$$$ |$$ |$$ |\\$$$$$$$ |      $$ | \\$$ |\\$$$$$$$ |  \\$  /  \\$$$$$$$ |$$ |";
 gotoxy(9,10); cout<<"\\_______/  \\_______|  \\____/  \\_______|\\__|\\__| \\_______|      \\__|  \\__| \\_______|   \\_/    \\_______|\\__|";
