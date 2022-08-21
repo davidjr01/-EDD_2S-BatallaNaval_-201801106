@@ -36,11 +36,11 @@ void gotoxy(int x, int y){
 
 int  MenuPrincipal(){
     string m[5];
-    m[0] = "   1. Carga de usuarios";
-    m[1] = "   2. Carga de tareas";
-    m[2] = "   3. Ingreso manual";
-    m[3] = "   4. Reportes";
-    m[4] = "   5. Salir";
+    m[0] = "   1. asdfasdfasdf";
+    m[1] = "   2. asdfasdf";
+    m[2] = "   3. asdfasdf";
+    m[3] = "   4. asdfasdf";
+    m[4] = "   5. asdfasdfr";
     char lec;
     int aux = 0, c, pos = 0;
     while (aux != 13)
