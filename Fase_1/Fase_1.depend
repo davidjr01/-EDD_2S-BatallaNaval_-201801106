@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1661069998 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\main.cpp
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<string>
+	<windows.h>
+	<sstream>
+	<fstream>
+
