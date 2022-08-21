@@ -25,7 +25,7 @@ void LDobleUsuario::Mostrar(){
 
     while (cont!=0){
         if((NodoMostrar!=cabeza)||(pivote!=false)){
-            cout<<"nick: "<<NodoMostrar->nick << "Password " << NodoMostrar->pass<< "Edad:  " << NodoMostrar->edad<< "Monedas: " << NodoMostrar->monedas<<endl;
+            cout<<"nick: "<<NodoMostrar->nick << "       Password: " << NodoMostrar->pass<< "        Edad:  " << NodoMostrar->edad<< "         Monedas: " << NodoMostrar->monedas<<endl;
             NodoMostrar=NodoMostrar->siguiente;
             pivote=false;
             cont-=1;
@@ -105,4 +105,35 @@ void LDobleUsuario::ModificarEdad(int nick1,int nick2){
     }
 
 }
+
+bool LDobleUsuario::Login(string nick,string pass){
+    bool encontrado=false;
+    NodoUsuario*ENick;
+    ENick=cabeza;
+    bool pivote=true;
+    int cont=this->tamanio;
+
+    while (cont!=0){
+        if((ENick!=cabeza)||(pivote!=false)){
+            if((nick==ENick->nick)&&(pass==ENick->pass)){
+                encontrado=true;
+                break;
+            }
+            ENick=ENick->siguiente;
+            pivote=false;
+            cont-=1;
+        }else{
+            break;
+        }
+
+    }
+    return encontrado;
+
+}
+
+void LDobleUsuario::Eliminar(string nick){
+
+}
+
+
 

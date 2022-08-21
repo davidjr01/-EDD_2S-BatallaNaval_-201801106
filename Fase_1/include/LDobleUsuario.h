@@ -21,8 +21,8 @@ class LDobleUsuario
         void ModificarPass(string,string);
         void ModificarEdad(int,int);
         void Mostrar();
-        void Buscar();
-        void Eliminar();
+        bool Login(string,string);
+        void Eliminar(string);
 
     protected:
 
