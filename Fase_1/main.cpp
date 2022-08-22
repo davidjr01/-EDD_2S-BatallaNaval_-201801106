@@ -96,6 +96,9 @@ void CargaMasiva(){
                 Lcategoria->Insertar(categoria,Larti);
             }
     }
+    Lcategoria->Mostrar();
+
+
 
 
 }

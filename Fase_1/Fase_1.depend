@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1661127872 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\main.cpp
+1661138023 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\main.cpp
 	<iostream>
 	<stdlib.h>
 	<conio.h>
@@ -483,4 +483,6 @@
 
 1661085717 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\nodocategoria.h
 	"LArticulo.h"
+
+1661136507 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\nodotutorial.cpp
 
