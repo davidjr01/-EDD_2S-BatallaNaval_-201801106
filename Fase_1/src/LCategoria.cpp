@@ -16,6 +16,7 @@ void LCategoria::Insertar(string categoria,LArticulo*lista){
      }
 
 }
+
 void LCategoria::Mostrar(){
     if(cabeza==NULL){
             cout<<"vacia"<<endl;
@@ -31,3 +32,38 @@ void LCategoria::Mostrar(){
     }
 
 }
+
+bool LCategoria::Existe(string categoria){
+    bool s=false;
+    if(cabeza==NULL){
+            s=false;
+    return s;
+
+    }else{
+        NodoCategoria*aux=cabeza;
+        while(aux!=NULL){
+            if(categoria==aux->categoria){
+                    s=true;
+                    break;
+            }else{
+                s=false;
+            }
+            aux=aux->siguiente;
+        }
+        return s;
+    }
+
+}
+
+void LCategoria::Buscar(string categoria,string id,int precio,string nombre,string src){
+    NodoCategoria*aux=cabeza;
+    while(aux!=NULL){
+        if(categoria==aux->categoria){
+            aux->lista->Insertar(id,precio,nombre,src);
+            break;
+        }
+        aux=aux->siguiente;
+    }
+}
+
+

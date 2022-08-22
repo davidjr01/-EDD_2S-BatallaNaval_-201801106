@@ -7,11 +7,14 @@
 #include <fstream>
 #include<nlohmann/json.hpp>
 #include "LDobleUsuario.h"
+#include "LCategoria.h"
+#include "LArticulo.h"
 
 using namespace std;
 using namespace nlohmann;
 
 LDobleUsuario *LUsuario=new LDobleUsuario();
+LCategoria *Lcategoria=new LCategoria();
 
 
 
@@ -27,14 +30,14 @@ void CargaMasiva();
 
 int main(){
 
-    int op;
+    int op=10;
     do
     {
         op = MenuPrincipal();
         switch (op)
         {
-            case 0:  CargaMasiva(); getch(); break;
-            case 1:  break;  /*Estudiantes->graficar(); getch();*/
+            case 0: clear(); CargaMasiva(); getch(); break;
+            case 1: clear(); cout<<"loging";getch(); break;  /*Estudiantes->graficar(); getch();*/
             case 2:  break;
             case 3:  break;
             case 4: break;
@@ -59,14 +62,15 @@ void gotoxy(int x, int y){
 }
 
 void CargaMasiva(){
-    clear();
+
+
     ifstream AJson("C:/Users/david/Desktop/json.json");
     nlohmann::json  objeto= nlohmann::json::parse(AJson);
     int tusuario=objeto["usuarios"].size();
     int tarticulos=objeto["articulos"].size();
     int ttutorial=objeto["tutorial"].size();
 
-    for(int i=0;i<tusuario;i++){
+    for(int i=0;i<=tusuario -1;i++){
             string nicks=objeto["usuarios"][i]["nick"].get<string>();
             string passs=objeto["usuarios"][i]["password"].get<string>();
             string edads=objeto["usuarios"][i]["edad"].get<string>();
@@ -75,6 +79,22 @@ void CargaMasiva(){
             int moneds2=stoi(moneds);
             LUsuario->Insertar(nicks,passs,edads2,moneds2);
 
+    }
+
+    for (int i=0; i<=tarticulos-1;i++){
+            string categoria=objeto["articulos"][i]["categoria"].get<string>();
+            string id=objeto["articulos"][i]["id"].get<string>();
+            string precio=objeto["articulos"][i]["precio"].get<string>();
+            string nombre=objeto["articulos"][i]["nombre"].get<string>();
+            string src=objeto["articulos"][i]["src"].get<string>();
+            int precio2=stoi(precio);
+            if(Lcategoria->Existe(categoria)==true){
+                Lcategoria->Buscar(categoria,id,precio2,nombre,src);
+            }else{
+                LArticulo *Larti=new LArticulo();
+                Larti->Insertar(id,precio2,nombre,src);
+                Lcategoria->Insertar(categoria,Larti);
+            }
     }
 
 

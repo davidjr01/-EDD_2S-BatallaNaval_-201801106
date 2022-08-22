@@ -18,6 +18,8 @@ class LCategoria
         }
         void Insertar(string,LArticulo*lista);
         void Mostrar();
+        bool Existe(string);
+        void Buscar(string ,string ,int ,string ,string );
 
     protected:
 

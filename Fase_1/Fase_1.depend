@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1661082085 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\main.cpp
+1661127872 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\main.cpp
 	<iostream>
 	<stdlib.h>
 	<conio.h>
@@ -9,6 +9,8 @@
 	<fstream>
 	<nlohmann/json.hpp>
 	"LDobleUsuario.h"
+	"LCategoria.h"
+	"LArticulo.h"
 
 1661077086 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\nodousuario.cpp
 
@@ -459,7 +461,7 @@
 	<iostream>
 	"string"
 
-1661084221 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\larticulo.h
+1661127345 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\larticulo.h
 	"NodoArticulo.h"
 
 1661082535 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\nodoarticulo.cpp
@@ -468,4 +470,17 @@
 1661084121 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\nodoarticulo.h
 	<stddef.h>
 	"string"
+
+1661127345 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\lcategoria.cpp
+	"LCategoria.h"
+
+1661119608 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\lcategoria.h
+	"LArticulo.h"
+	<stddef.h>
+	<iostream>
+	"string"
+	"NodoCategoria.h"
+
+1661085717 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\nodocategoria.h
+	"LArticulo.h"
 

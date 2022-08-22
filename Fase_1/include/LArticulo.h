@@ -13,7 +13,7 @@ class LArticulo
         }
         void Insertar(string,int,string,string);
         void Mostrar();
-        NodoArticulo Devolver();
+        //NodoArticulo Devolver();
 
     protected:
 
