@@ -11,7 +11,7 @@ class ListaTutorial
         ListaTutorial(){
             this->cabeza=NULL;
         }
-        void Insertar(int,int);
+        void InsertarPrimero(int,int);
         void Mostrar();
 
 };

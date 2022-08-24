@@ -4,8 +4,8 @@
 #include "string"
 using namespace std;
 
-ListaTutorial::InsertarPrimero(int x,int y){
-    NodoTutoriale*nuevo=new NodoTutorial(x,y);
+void ListaTutorial::InsertarPrimero(int x,int y){
+    NodoTutorial*nuevo=new NodoTutorial(x,y);
      if (cabeza==NULL){
             cabeza=nuevo;
             tamanio+=1;
@@ -15,14 +15,14 @@ ListaTutorial::InsertarPrimero(int x,int y){
          tamanio+=1;
      }
 }
-ListaTutorial::Mostrar(){
-    if(cabecera==NULL){
+void ListaTutorial::Mostrar(){
+    if(cabeza==NULL){
             cout<<"vacia"<<endl;
 
     }else{
-        NodoListaSimple*aux=cabecera;
+        NodoTutorial*aux=cabeza;
         while(aux!=NULL){
-            cout<<aux->valor<<endl;
+            cout<<"X=  "<<aux->x<<"     Y=  " <<aux->y<<endl;
             aux=aux->siguiente;
         }
     }

@@ -19,10 +19,11 @@ class LDobleUsuario
         void Insertar(string,string,int,int);
         void ModificarNick(string,string);
         void ModificarPass(string,string);
-        void ModificarEdad(int,int);
+        void ModificarEdad(string,int);
         void Mostrar();
         bool Login(string,string);
         void Eliminar(string);
+        bool Existe(string);
 
     protected:
 

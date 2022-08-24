@@ -68,7 +68,7 @@ void LDobleUsuario::ModificarPass(string nick1,string nick2){
 
     while (cont!=0){
         if((ENick!=cabeza)||(pivote!=false)){
-            if(nick1==ENick->pass){
+            if(nick1==ENick->nick){
                 ENick->pass=nick2;
                 break;
             }
@@ -83,7 +83,7 @@ void LDobleUsuario::ModificarPass(string nick1,string nick2){
 
 }
 
-void LDobleUsuario::ModificarEdad(int nick1,int nick2){
+void LDobleUsuario::ModificarEdad(string nick1,int  nick2){
     NodoUsuario*ENick;
     ENick=cabeza;
     bool pivote=true;
@@ -91,7 +91,7 @@ void LDobleUsuario::ModificarEdad(int nick1,int nick2){
 
     while (cont!=0){
         if((ENick!=cabeza)||(pivote!=false)){
-            if(nick1==ENick->edad){
+            if(nick1==ENick->nick){
                 ENick->edad=nick2;
                 break;
             }
@@ -105,6 +105,7 @@ void LDobleUsuario::ModificarEdad(int nick1,int nick2){
     }
 
 }
+
 
 bool LDobleUsuario::Login(string nick,string pass){
     bool encontrado=false;
@@ -129,6 +130,30 @@ bool LDobleUsuario::Login(string nick,string pass){
     }
     return encontrado;
 
+}
+bool LDobleUsuario::Existe(string nick){
+    bool esta=false;
+    NodoUsuario*NodoMostrar;
+    NodoMostrar=cabeza;
+    bool pivote=true;
+    int cont=this->tamanio;
+
+    while (cont!=0){
+        if((NodoMostrar!=cabeza)||(pivote!=false)){
+            if(nick==NodoMostrar->nick){
+                esta=true;
+                break;
+            }
+            NodoMostrar=NodoMostrar->siguiente;
+            pivote=false;
+            cont-=1;
+            cout<<endl;
+        }else{
+            break;
+        }
+
+    }
+    return esta;
 }
 
 void LDobleUsuario::Eliminar(string nick){

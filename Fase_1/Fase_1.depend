@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1661138023 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\main.cpp
+1661323007 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\main.cpp
 	<iostream>
 	<stdlib.h>
 	<conio.h>
@@ -11,6 +11,7 @@
 	"LDobleUsuario.h"
 	"LCategoria.h"
 	"LArticulo.h"
+	"ListaTutorial.h"
 
 1661077086 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\nodousuario.cpp
 
@@ -18,10 +19,10 @@
 	<iostream>
 	<string>
 
-1661081845 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\ldobleusuario.cpp
+1661320065 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\ldobleusuario.cpp
 	"LDobleUsuario.h"
 
-1661078057 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\ldobleusuario.h
+1661320055 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\ldobleusuario.h
 	<stddef.h>
 	<iostream>
 	"string"
@@ -485,4 +486,17 @@
 	"LArticulo.h"
 
 1661136507 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\nodotutorial.cpp
+
+1661147534 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\listatutorial.cpp
+	"ListaTutorial.h"
+	<stddef.h>
+	<iostream>
+	"string"
+
+1661147122 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\listatutorial.h
+	"NodoTutorial.h"
+
+1661138023 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\nodotutorial.h
+	<iostream>
+	<string>
 
