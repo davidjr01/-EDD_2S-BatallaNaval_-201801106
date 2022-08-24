@@ -24,6 +24,7 @@ class LDobleUsuario
         bool Login(string,string);
         void Eliminar(string);
         bool Existe(string);
+        int MMoneda(string);
 
     protected:
 

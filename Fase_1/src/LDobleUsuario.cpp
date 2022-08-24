@@ -37,6 +37,32 @@ void LDobleUsuario::Mostrar(){
     }
 }
 
+int LDobleUsuario::MMoneda(string nicks){
+    int total=0;
+
+    NodoUsuario*NodoMostrar;
+    NodoMostrar=cabeza;
+    bool pivote=true;
+    int cont=this->tamanio;
+
+    while (cont!=0){
+        if((NodoMostrar!=cabeza)||(pivote!=false)){
+            if(NodoMostrar->nick==nicks){
+                total=NodoMostrar->monedas;
+                break;
+            }
+            NodoMostrar=NodoMostrar->siguiente;
+            pivote=false;
+            cont-=1;
+            cout<<endl;
+        }else{
+            break;
+        }
+
+    }
+    return total;
+}
+
 void LDobleUsuario::ModificarNick(string nick1,string nick2){
     NodoUsuario*ENick;
     ENick=cabeza;

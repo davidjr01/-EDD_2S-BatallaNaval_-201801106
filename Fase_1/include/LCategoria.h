@@ -1,9 +1,13 @@
 #ifndef LCATEGORIA_H
 #define LCATEGORIA_H
+ #include <iostream>
+#include<stdlib.h>
+#include <conio.h>
+#include <string>
+#include <windows.h>
+#include <sstream>
+#include <fstream>
 #include "LArticulo.h"
-#include<stddef.h>
-#include<iostream>
-#include "string"
 #include "NodoCategoria.h"
 using namespace std;
 
@@ -18,6 +22,15 @@ class LCategoria
         }
         void Insertar(string,LArticulo*lista);
         void Mostrar();
+        int Numero();
+        void gotoxys(int x, int y){
+            HANDLE hCon;
+            hCon = GetStdHandle(STD_OUTPUT_HANDLE);
+            COORD dwPos;
+            dwPos.X = x;
+            dwPos.Y = y;
+            SetConsoleCursorPosition(hCon, dwPos);
+        }
         bool Existe(string);
         void Buscar(string ,string ,int ,string ,string );
 

@@ -1,6 +1,7 @@
 #include "LCategoria.h"
 
 
+
 void LCategoria::Insertar(string categoria,LArticulo*lista){
     NodoCategoria*nNuevo=new NodoCategoria(categoria,lista);
     if (cabeza==NULL){
@@ -18,19 +19,35 @@ void LCategoria::Insertar(string categoria,LArticulo*lista){
 }
 
 void LCategoria::Mostrar(){
+    int xs=0;
     if(cabeza==NULL){
             cout<<"vacia"<<endl;
 
     }else{
         NodoCategoria*aux=cabeza;
         while(aux!=NULL){
-            cout<<"Categoria: " <<aux->categoria<<endl;
-            aux->lista->Mostrar();
-            cout<<endl;
+            string casa=aux->categoria;
+            aux->lista->Mostrar(casa,xs);
+            xs=xs + aux->lista->Numero();
             aux=aux->siguiente;
         }
     }
 
+}
+
+int LCategoria::Numero(){
+    int contador=0;
+    if(cabeza==NULL){
+            cout<<"vacia"<<endl;
+
+    }else{
+        NodoCategoria*aux=cabeza;
+        while(aux!=NULL){
+            contador=contador + aux->lista->Numero();
+            aux=aux->siguiente;
+        }
+    }
+    return contador;
 }
 
 bool LCategoria::Existe(string categoria){

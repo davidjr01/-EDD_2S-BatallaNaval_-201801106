@@ -40,8 +40,7 @@ void VerArticulo();
 
 
 int main(){
-    VerArticulo();
-    getch();
+
     int x=0;
     int op=10;
     do
@@ -52,7 +51,7 @@ int main(){
             case 0: clear(); CargaMasiva(); getch(); break;
             case 1: clear();Registrar();  break;
             case 2: clear(); Login();/*Logueado();*/  break;
-            case 3: clear(); LUsuario->Mostrar(); getch(); break;break;
+            case 3: clear();  break;
 
         }
     } while (op != 4);
@@ -75,9 +74,19 @@ void gotoxy(int x, int y){
 }
 
 void VerArticulo(){ ///////////////////////////////////////////////////////////////
-    gotoxy(85,5);cout<<"TOTAL  Tokens   "<<"10000";
+    int moneda=0;
+    moneda=LUsuario->MMoneda(varibleUsuario);
+    gotoxy(85,5);cout<<"TOTAL  Tokens   "<<moneda;
     gotoxy(2,6);cout<<"TIENDA";
-    gotoxy(7,7);cout<<"ID";
+    gotoxy(2,8);cout<<"ID";
+    gotoxy(16,8);cout<<"NOMBRE";
+    gotoxy(55,8);cout<<"CATEGORIA";
+    gotoxy(95,8);cout<<"PRECIO";
+    int t1,t2,t3;
+    Lcategoria->Mostrar();
+
+    getch();
+
 
 
 

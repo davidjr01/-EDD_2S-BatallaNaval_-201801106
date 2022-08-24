@@ -21,15 +21,37 @@ void LArticulo::Insertar(string id,int precio,string nombre,string src){
 }
 
 
-void LArticulo::Mostrar(){
+void LArticulo::Mostrar(string categoria,int numero){
+    int contador222=numero;
+    if(cabeza==NULL){
+            cout<<"vacia"<<endl;
+
+    }else{
+        NodoArticulo*aux=cabeza;
+
+        while(aux!=NULL){
+            contador222=contador222+1;
+            gotoxyz(55,8+contador222);cout<<categoria;
+            gotoxyz(2,8+contador222); cout<<aux->id;
+            gotoxyz(16,8+contador222);cout<<aux->nombre;
+            gotoxyz(95,8+contador222);cout<<aux->precio;
+            aux=aux->siguiente;
+        }
+    }
+}
+
+int  LArticulo::Numero(){
+    int contador22=0;
     if(cabeza==NULL){
             cout<<"vacia"<<endl;
 
     }else{
         NodoArticulo*aux=cabeza;
         while(aux!=NULL){
-            cout<<"Id: "<<aux->id<<"    Precio: "<<aux->precio<<"    Nombre: "<<aux->nombre<<"    src: "<<aux->src<<endl;
+            contador22+=1;
             aux=aux->siguiente;
         }
     }
+    return contador22;
+
 }
