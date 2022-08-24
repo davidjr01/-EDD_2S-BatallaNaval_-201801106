@@ -36,11 +36,17 @@ void Login();
 void TituloLogin();
 void TituloUser();
 void VerArticulo();
+void EliminarUsuario();
+void MenuPrimero();
 
 
 
 int main(){
+    MenuPrimero();
+    return 0;
 
+}
+void MenuPrimero(){
     int x=0;
     int op=10;
     do
@@ -51,12 +57,10 @@ int main(){
             case 0: clear(); CargaMasiva(); getch(); break;
             case 1: clear();Registrar();  break;
             case 2: clear(); Login();/*Logueado();*/  break;
-            case 3: clear();  break;
+            case 3: clear(); LUsuario->Mostrar();getch(); break;
 
         }
     } while (op != 4);
-
-    return 0;
 
 }
 void clear()
@@ -73,7 +77,7 @@ void gotoxy(int x, int y){
     SetConsoleCursorPosition(hCon, dwPos);
 }
 
-void VerArticulo(){ ///////////////////////////////////////////////////////////////
+void VerArticulo(){
     int moneda=0;
     moneda=LUsuario->MMoneda(varibleUsuario);
     gotoxy(85,5);cout<<"TOTAL  Tokens   "<<moneda;
@@ -87,9 +91,12 @@ void VerArticulo(){ ////////////////////////////////////////////////////////////
 
     getch();
 
-
-
-
+}
+void EliminarUsuario(){////////////////
+    LUsuario->Eliminar(varibleUsuario);
+    cout<<"USUARIO ELIMINADO";
+    getch();
+    MenuPrimero();
 }
 void ModificarUsuario(){
      int opcion2=0;
@@ -187,7 +194,7 @@ void Logueado(){
             gotoxy(10,21); cin>>opcion;
             switch (opcion){
             case 1: clear();ModificarUsuario(); getch(); break;
-            case 2: clear();cout<<"eliminar"; getch(); break;
+            case 2: clear();EliminarUsuario(); getch(); break;
             case 3: clear();cout<<"tutorial"; break;
             case 4: clear();VerArticulo(); break;
             case 5: break;

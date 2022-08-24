@@ -15,6 +15,105 @@ void LDobleUsuario::Insertar(string nick,string pass,int edad,int moneda ){
      this->tamanio+=1;
 
 }
+void LDobleUsuario::EliminarPrimero(){
+    if (this->tamanio==0){
+        this->cabeza=NULL;
+        this->cabeza=NULL;
+    }
+    else{
+        NodoUsuario*nEliminado=cabeza;
+        cabeza=nEliminado->siguiente;
+        cabeza->anterior=cola;
+        cola->siguiente=cabeza;
+        nEliminado->anterior=NULL;
+        nEliminado->siguiente=NULL;
+        tamanio-=1;
+        delete(nEliminado);
+    }
+
+}
+void LDobleUsuario::EliminarUltimo(){
+    if (this->tamanio==0){
+        this->cabeza=NULL;
+        this->cabeza=NULL;
+    }
+    else{
+        NodoUsuario*nEliminado=cola;
+        cola = nEliminado->anterior;
+        cola->siguiente = cabeza;
+        cabeza->anterior =cola;
+        nEliminado->anterior = NULL;
+        nEliminado->siguiente =NULL;
+        tamanio -= 1;
+        delete(nEliminado);
+
+    }
+}
+int LDobleUsuario::OIndice(string nick){
+    NodoUsuario*NodoMostrar;
+    NodoMostrar=cabeza;
+    bool pivote=true;
+    int cont=this->tamanio;
+    int manda1=-1;
+    int manda2;
+    while (cont!=0){
+        manda1=manda1+1;
+        if((NodoMostrar!=cabeza)||(pivote!=false)){
+            if(nick==NodoMostrar->nick){
+                manda2=manda1;
+                break;
+            }
+            NodoMostrar=NodoMostrar->siguiente;
+            pivote=false;
+            cont-=1;
+            cout<<endl;
+        }else{
+            break;
+        }
+
+    }
+    return manda2;
+}
+
+void LDobleUsuario::Eliminar(string nick){
+    int indi=this->OIndice(nick);
+    if(indi==0){
+        this->EliminarPrimero();
+    }else if(indi==tamanio-1){
+        this->EliminarUltimo();
+    }else {
+        NodoUsuario*NodoMostrar;
+        NodoMostrar=cabeza;
+        bool pivote=true;
+        int cont=this->tamanio;
+        while (cont!=0){
+            if((NodoMostrar!=cabeza)||(pivote!=false)){
+                if(NodoMostrar->nick==nick){
+                    NodoUsuario*nAnterior=NodoMostrar->anterior;
+                    NodoUsuario*nSiguiente=NodoMostrar->siguiente;
+                    nAnterior->siguiente=nSiguiente;
+                    nSiguiente->anterior  =nAnterior;
+                    NodoMostrar->anterior = NULL;
+                    NodoMostrar->siguiente =NULL;
+                    delete(NodoMostrar);
+                    tamanio -= 1;
+                    break;
+
+
+                }
+                NodoMostrar=NodoMostrar->siguiente;
+                pivote=false;
+                cont-=1;
+                }else{
+                    break;
+                }
+        }
+    }
+
+
+}
+
+
 
 void LDobleUsuario::Mostrar(){
 
@@ -182,9 +281,7 @@ bool LDobleUsuario::Existe(string nick){
     return esta;
 }
 
-void LDobleUsuario::Eliminar(string nick){
 
-}
 
 
 

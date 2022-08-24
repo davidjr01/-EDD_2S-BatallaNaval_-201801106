@@ -17,10 +17,14 @@ class LDobleUsuario
             this->cola=NULL;
         }
         void Insertar(string,string,int,int);
+        void EliminarPrimero();
+        void EliminarUltimo();
+
         void ModificarNick(string,string);
         void ModificarPass(string,string);
         void ModificarEdad(string,int);
         void Mostrar();
+        int OIndice(string);
         bool Login(string,string);
         void Eliminar(string);
         bool Existe(string);
