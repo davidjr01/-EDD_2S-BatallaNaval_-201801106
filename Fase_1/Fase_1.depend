@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1661360835 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\main.cpp
+1661374312 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\main.cpp
 	<iostream>
 	<stdlib.h>
 	<conio.h>
@@ -19,13 +19,17 @@
 	<iostream>
 	<string>
 
-1661361412 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\ldobleusuario.cpp
+1661379043 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\ldobleusuario.cpp
 	"LDobleUsuario.h"
 
-1661357968 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\ldobleusuario.h
-	<stddef.h>
+1661368973 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\ldobleusuario.h
 	<iostream>
-	"string"
+	<stdlib.h>
+	<conio.h>
+	<string>
+	<windows.h>
+	<sstream>
+	<fstream>
 	"NodoUsuario.h"
 
 1661063874 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\nlohmann\json.hpp

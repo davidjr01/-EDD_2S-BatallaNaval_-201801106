@@ -66,7 +66,7 @@ int LDobleUsuario::OIndice(string nick){
             NodoMostrar=NodoMostrar->siguiente;
             pivote=false;
             cont-=1;
-            cout<<endl;
+
         }else{
             break;
         }
@@ -98,8 +98,6 @@ void LDobleUsuario::Eliminar(string nick){
                     delete(NodoMostrar);
                     tamanio -= 1;
                     break;
-
-
                 }
                 NodoMostrar=NodoMostrar->siguiente;
                 pivote=false;
@@ -153,7 +151,6 @@ int LDobleUsuario::MMoneda(string nicks){
             NodoMostrar=NodoMostrar->siguiente;
             pivote=false;
             cont-=1;
-            cout<<endl;
         }else{
             break;
         }
@@ -231,6 +228,70 @@ void LDobleUsuario::ModificarEdad(string nick1,int  nick2){
 
 }
 
+void LDobleUsuario::Graficar(){
+
+     string cGeneral="digraph G {\n"
+            "node[shape = box,width=0.7,height=0.7,fillcolor=\"white\" color=\"black\"  ]\n"
+            "graph [ nodesep=\"0.5\"]\n"
+            "graph [pad=\"0.2\", nodesep=\"0.5\", ranksep=\"2\"]\n";
+
+    string nodos2="";
+    string cNodos="";
+    string cConecciones="";
+    int cont=0;
+    NodoUsuario*NodoMostrar;
+    NodoMostrar=cabeza;
+    bool pivote=true;
+    int contador=tamanio;
+    int casa=2;
+    while (contador!=0){
+        if((NodoMostrar!=cabeza)||(pivote!=false)){
+            cont+=1;
+            cNodos+="Nodo"+to_string(cont)+"[label=\" "+NodoMostrar->nick+"\"]\n";
+            if(NodoMostrar->siguiente==cabeza){
+                cConecciones+="Nodo"+to_string(cont)+"->"+"Nodo1\n";
+            }else{
+
+                cConecciones+="Nodo"+to_string(cont)+"->";
+            }
+
+
+
+            NodoMostrar=NodoMostrar->siguiente;
+            pivote=false;
+            contador-=1;
+
+        }else{
+            break;
+        }
+
+    }
+     cGeneral+=cNodos+"edge[ dir=\"both\"]; "+"\n{rank = same;\n"+cConecciones+"\n}\n edge[dir=\"forward\"]; \n";
+    cGeneral+="\n}";
+
+    try
+    {
+        string path = ".\\Reportes\\";
+        ofstream file;
+        file.open(path + "ListaUsuarios.dot",std::ios::out);
+        if(file.fail())
+        {
+            exit(1);
+        }
+        file<<cGeneral;
+        file.close();
+        string command = "dot -Tpdf " + path + "ListaUsuarios.dot -o  " + path + "ListaUsuarios.pdf";
+        system(command.c_str());
+    }
+    catch(exception e)
+    {
+        cout<<"Ocurrio un error"<<endl;
+    }
+
+
+
+}
+
 
 bool LDobleUsuario::Login(string nick,string pass){
     bool encontrado=false;
@@ -272,7 +333,7 @@ bool LDobleUsuario::Existe(string nick){
             NodoMostrar=NodoMostrar->siguiente;
             pivote=false;
             cont-=1;
-            cout<<endl;
+
         }else{
             break;
         }

@@ -43,6 +43,7 @@ void MenuPrimero();
 
 int main(){
     MenuPrimero();
+
     return 0;
 
 }
@@ -57,7 +58,7 @@ void MenuPrimero(){
             case 0: clear(); CargaMasiva(); getch(); break;
             case 1: clear();Registrar();  break;
             case 2: clear(); Login();/*Logueado();*/  break;
-            case 3: clear(); LUsuario->Mostrar();getch(); break;
+            case 3: clear(); LUsuario->Graficar();getch(); break;
 
         }
     } while (op != 4);

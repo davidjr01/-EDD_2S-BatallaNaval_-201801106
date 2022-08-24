@@ -1,9 +1,13 @@
 #ifndef LDOBLEUSUARIO_H
 #define LDOBLEUSUARIO_H
 
-#include<stddef.h>
-#include<iostream>
-#include "string"
+ #include <iostream>
+#include<stdlib.h>
+#include <conio.h>
+#include <string>
+#include <windows.h>
+#include <sstream>
+#include <fstream>
 #include "NodoUsuario.h"
 
 class LDobleUsuario
@@ -19,7 +23,7 @@ class LDobleUsuario
         void Insertar(string,string,int,int);
         void EliminarPrimero();
         void EliminarUltimo();
-
+        void Graficar();
         void ModificarNick(string,string);
         void ModificarPass(string,string);
         void ModificarEdad(string,int);
