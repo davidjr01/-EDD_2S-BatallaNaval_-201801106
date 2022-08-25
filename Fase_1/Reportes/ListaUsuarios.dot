@@ -2,12 +2,30 @@ digraph G {
 node[shape = box,width=0.7,height=0.7,fillcolor="white" color="black"  ]
 graph [ nodesep="0.5"]
 graph [pad="0.2", nodesep="0.5", ranksep="2"]
-Nodo1[label=" david"]
-Nodo2[label=" usuario1"]
-Nodo3[label=" usuario2"]
-Nodo4[label=" usuario3"]
-Nodo5[label=" usuario4"]
-Nodo6[label=" usuario5"]
+Nodo1[label=" Nick :david
+Password :123
+Edad :18
+Monedas :10"]
+Nodo2[label=" Nick :usuario1
+Password :123
+Edad :20
+Monedas :0"]
+Nodo3[label=" Nick :usuario2
+Password :123
+Edad :20
+Monedas :0"]
+Nodo4[label=" Nick :usuario3
+Password :123
+Edad :20
+Monedas :0"]
+Nodo5[label=" Nick :usuario4
+Password :123
+Edad :20
+Monedas :0"]
+Nodo6[label=" Nick :usuario5
+Password :123
+Edad :17
+Monedas :0"]
 edge[ dir="both"]; 
 {rank = same;
 Nodo1->Nodo2->Nodo3->Nodo4->Nodo5->Nodo6->Nodo1

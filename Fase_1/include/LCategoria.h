@@ -33,6 +33,7 @@ class LCategoria
         }
         bool Existe(string);
         void Buscar(string ,string ,int ,string ,string );
+        void Graficar();
 
     protected:
 

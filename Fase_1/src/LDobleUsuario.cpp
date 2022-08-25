@@ -247,7 +247,8 @@ void LDobleUsuario::Graficar(){
     while (contador!=0){
         if((NodoMostrar!=cabeza)||(pivote!=false)){
             cont+=1;
-            cNodos+="Nodo"+to_string(cont)+"[label=\" "+NodoMostrar->nick+"\"]\n";
+            string bloque="Nick :"+NodoMostrar->nick+"\nPassword :"+NodoMostrar->pass+"\nEdad :"+to_string(NodoMostrar->edad)+"\nMonedas :"+to_string(NodoMostrar->monedas);
+            cNodos+="Nodo"+to_string(cont)+"[label=\" "+ bloque +"\"]\n";
             if(NodoMostrar->siguiente==cabeza){
                 cConecciones+="Nodo"+to_string(cont)+"->"+"Nodo1\n";
             }else{

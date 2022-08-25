@@ -20,7 +20,31 @@ void LArticulo::Insertar(string id,int precio,string nombre,string src){
      }
 }
 
+string LArticulo::Graficar(int id,string refs){
+    string contenido="";
+    string cNodos="";
+    string Cconecciones=refs+"->";
+    if(cabeza == NULL){
 
+    }else{
+        int c=0;
+        int cont=0;
+        NodoArticulo*aux=cabeza;
+        while(aux!=NULL){
+                cont+=1;
+                cNodos+="Nodos"+to_string(id)+to_string(cont)+"[label=\""+ aux->nombre+"\"]\n";
+                if(aux->siguiente!=NULL){
+                    Cconecciones+="Nodos"+to_string(id)+to_string(cont)+"->";
+                }else{
+                    Cconecciones+="Nodos"+to_string(id)+to_string(cont);
+                }
+
+            aux=aux->siguiente;
+        }
+        contenido+="\n"+cNodos+Cconecciones+"\n";
+    }
+    return contenido;
+}
 void LArticulo::Mostrar(string categoria,int numero){
     int contador222=numero;
     if(cabeza==NULL){

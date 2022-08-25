@@ -38,11 +38,12 @@ void TituloUser();
 void VerArticulo();
 void EliminarUsuario();
 void MenuPrimero();
-
+void Tuturial();
 
 
 int main(){
-    MenuPrimero();
+    Tuturial();
+    //MenuPrimero();
 
     return 0;
 
@@ -58,7 +59,7 @@ void MenuPrimero(){
             case 0: clear(); CargaMasiva(); getch(); break;
             case 1: clear();Registrar();  break;
             case 2: clear(); Login();/*Logueado();*/  break;
-            case 3: clear(); LUsuario->Graficar();getch(); break;
+            case 3: clear(); Lcategoria->Graficar();getch(); break;
 
         }
     } while (op != 4);
@@ -77,6 +78,14 @@ void gotoxy(int x, int y){
     dwPos.Y = y;
     SetConsoleCursorPosition(hCon, dwPos);
 }
+void Tuturial(){
+    gotoxy(10,5);cout<<"TUTORIAL";
+    gotoxy(15,7);cout<<"Tablero";
+    gotoxy(20,8);cout<<"Ancho:";
+    gotoxy(20,9);cout<<"Alto:";
+    gotoxy(15,11);cout<<"Movimientos:";
+
+}
 
 void VerArticulo(){
     int moneda=0;
@@ -93,12 +102,13 @@ void VerArticulo(){
     getch();
 
 }
-void EliminarUsuario(){////////////////
+void EliminarUsuario(){
     LUsuario->Eliminar(varibleUsuario);
     cout<<"USUARIO ELIMINADO";
     getch();
     MenuPrimero();
 }
+
 void ModificarUsuario(){
      int opcion2=0;
     while(opcion2!=4){

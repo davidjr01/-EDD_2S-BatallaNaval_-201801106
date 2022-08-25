@@ -28,6 +28,7 @@ class LArticulo
             dwPos.Y = y;
             SetConsoleCursorPosition(hCon, dwPos);
         }
+        string Graficar(int,string);
 
     protected:
 

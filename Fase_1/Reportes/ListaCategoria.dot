@@ -1,0 +1,27 @@
+digraph G {
+node[shape = box,width=0.7,height=0.7,fillcolor="white" color="black"  ]
+graph [ nodesep="0.5"]
+rankdir=LR;
+Nodo1[label="normal"]
+Nodo2[label="legendario"]
+Nodo3[label="epico"]
+
+{rank = same;
+Nodo1->Nodo2->Nodo3
+}
+ edge[dir="forward"]; 
+
+Nodos11[label="art1"]
+Nodos12[label="art3"]
+Nodos13[label="art3"]
+Nodo1->Nodos11->Nodos12->Nodos13
+
+Nodos21[label="art2"]
+Nodos22[label="art2"]
+Nodos23[label="art2"]
+Nodo2->Nodos21->Nodos22->Nodos23
+
+Nodos31[label="art2"]
+Nodo3->Nodos31
+
+}
