@@ -17,7 +17,7 @@ void LDPilas::Insertar(string nombre,Pila*lista){
 
 }
 
-void LDPilas::Mostrar(){
+/*void LDPilas::Mostrar(){
 
 
      string cGeneral="digraph G {\n"
@@ -70,6 +70,26 @@ void LDPilas::Mostrar(){
     {
         cout<<"Ocurrio un error"<<endl;
     }
+
+
+
+}*/
+
+void LDPilas::Mostrar(){
+
+
+
+    int cont=0;
+    NodoLPilas*NodoMostrar=cabeza;
+    int contador=tamanio;
+    int casa=2;
+    while (NodoMostrar!=NULL){
+            cout<<NodoMostrar->Nombre<<endl;
+            NodoMostrar->lista->Mostrar();
+            NodoMostrar=NodoMostrar->siguiente;
+    }
+
+
 
 
 

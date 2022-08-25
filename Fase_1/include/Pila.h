@@ -18,7 +18,7 @@ class Pila
             this->cabeza=NULL;
         }
         void Insertar(string);
-        string Mostrar(int,string);
+        void Mostrar();
         void Graficar();
 
     protected:

@@ -16,7 +16,7 @@ void Pila::Insertar(string jugada){
          tamanio+=1;
      }
 }
-/*void Pila::Mostrar(int a,string x){
+void Pila::Mostrar(){
     if(cabeza==NULL){
             cout<<"vacia"<<endl;
 
@@ -28,9 +28,9 @@ void Pila::Insertar(string jugada){
             aux=aux->siguiente;
         }
     }
-}*/
+}
 
-string  Pila::Mostrar(int id,string refs){
+/*string  Pila::Mostrar(int id,string refs){
     string contenido="";
     string cNodos="";
     string Cconecciones=refs+"->";
@@ -54,5 +54,5 @@ string  Pila::Mostrar(int id,string refs){
         contenido+="\n"+cNodos+Cconecciones+"\n";
     }
     return contenido;
-}
+}*/
 

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1661406153 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\main.cpp
+1661407008 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\main.cpp
 	<iostream>
 	<stdlib.h>
 	<conio.h>
@@ -536,7 +536,7 @@
 1661402328 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\nodolpilas.h
 	"Pila.h"
 
-1661405896 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\pila.h
+1661407000 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\pila.h
 	<stdlib.h>
 	<conio.h>
 	<string>
@@ -545,7 +545,7 @@
 	<fstream>
 	"NodoPila.h"
 
-1661405781 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\ldpilas.cpp
+1661407030 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\ldpilas.cpp
 	"LDPilas.h"
 	"NodoLPilas.h"
 
@@ -561,7 +561,7 @@
 	"NodoLPilas.h"
 	"Pila.h"
 
-1661405838 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\pila.cpp
+1661407000 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\pila.cpp
 	"NodoPila.h"
 	"Pila.h"
 	<stddef.h>
