@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1661394631 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\main.cpp
+1661400858 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\main.cpp
 	<iostream>
 	<stdlib.h>
 	<conio.h>
@@ -19,7 +19,7 @@
 	<iostream>
 	<string>
 
-1661396837 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\ldobleusuario.cpp
+1661397219 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\ldobleusuario.cpp
 	"LDobleUsuario.h"
 
 1661396837 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\ldobleusuario.h
@@ -520,4 +520,49 @@
 1661388631 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\nodotutorial.h
 	<iostream>
 	<string>
+
+1661400264 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\nodopila.cpp
+	"NodoPila.h"
+
+1661401836 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\nodopila.h
+	<stddef.h>
+	"string"
+
+1661401958 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\nodolpilas.cpp
+	"NodoLPilas.h"
+
+1661402328 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\nodolpilas.h
+	"Pila.h"
+
+1661401099 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\pila.h
+	<stdlib.h>
+	<conio.h>
+	<string>
+	<windows.h>
+	<sstream>
+	<fstream>
+	"NodoPila.h"
+
+1661402394 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\ldpilas.cpp
+	"LDPilas.h"
+	"NodoLPilas.h"
+
+1661402368 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\ldpilas.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<string>
+	<windows.h>
+	<sstream>
+	<fstream>
+	"LArticulo.h"
+	"NodoLPilas.h"
+	"Pila.h"
+
+1661402428 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\pila.cpp
+	"NodoPila.h"
+	"Pila.h"
+	<stddef.h>
+	<iostream>
+	"string"
 

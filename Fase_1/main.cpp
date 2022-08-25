@@ -10,6 +10,8 @@
 #include "LCategoria.h"
 #include "LArticulo.h"
 #include "ListaTutorial.h"
+#include "LDPilas.h"
+#include "Pila.h"
 
 using namespace std;
 using namespace nlohmann;
@@ -17,6 +19,7 @@ using namespace nlohmann;
 LDobleUsuario *LUsuario=new LDobleUsuario();
 LCategoria *Lcategoria=new LCategoria();
 ListaTutorial*Ltutorial=new ListaTutorial();
+LDPilas*Ldpilas=new LDPilas();
 string varibleUsuario="";
 string varibleEdad="";
 
@@ -39,11 +42,12 @@ void VerArticulo();
 void EliminarUsuario();
 void MenuPrimero();
 void Tuturial();
+void RealizarMovimientos();
 
 
 int main(){
 
-    MenuPrimero();
+    RealizarMovimientos();
 
     return 0;
 
@@ -64,7 +68,7 @@ void MenuPrimero(){
                     LUsuario->Graficar();
                     Lcategoria->Graficar();
                     Ltutorial->Graficar();
-                    LDobleUsuario*Usuario2=LUsuario;//////////////////////////////////////////
+                    LDobleUsuario*Usuario2=LUsuario;
                     cout<<"ORDENADO ACENDENTEMENE"<<endl<<endl;
                     Usuario2->OrdenarAcendente();
                     Usuario2->Mostrar();
@@ -205,6 +209,29 @@ void Login(){
 
 }
 
+void RealizarMovimientos(){//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    cout<<"INGRESE CANTIDAD DE MOVIMIENTOS :     ";
+    int movimiento;
+    cin>>movimiento;
+    Pila *pila=new Pila();
+    for(int i=0;i<movimiento;i++){
+        string x,y;
+        cout<<"X: ";
+        cin>>x;
+        cout<<"Y: ";
+        cin>>y;
+        string otro="("+x+","+y+")";
+        pila->Insertar(otro);
+    }
+    cout<<"NOMBRE DE JUGADA :      ";
+    string jugada;
+    cin>>jugada;
+    Ldpilas->Insertar(jugada,pila);
+    Ldpilas->Mostrar();
+
+
+}
+
 void Logueado(){
     int opcion=0;
     while(opcion!=6){
@@ -213,7 +240,7 @@ void Logueado(){
             gotoxy(10,14); cout<<"1.  EDITAR INFORMACION";
             gotoxy(10,15);cout<< "2.  ELIMINAR CUENTA";
             gotoxy(10,16); cout<<"3.  VER TUTORIAL";
-            gotoxy(10,17);cout<< "4.  VER ARTICULOS DE LA TIENDA";  ///////////////////////////////////////////////////////////////
+            gotoxy(10,17);cout<< "4.  VER ARTICULOS DE LA TIENDA";
             gotoxy(10,18);cout<< "5.  REALIZAR MOVIMIENTOS";
             gotoxy(10,19);cout<< "6.  SALIR"<<endl;
             gotoxy(10,21); cin>>opcion;
@@ -244,7 +271,7 @@ void Registrar(){
         getch();
     }else{
         LUsuario->Insertar(iusuario,ipass,iedad,0);
-        gotoxy(28,20);cout<<"SE REGISTRO EL USUARIO";
+        gotoxy(28,20);cout<<"SE REGISTRO EL USUARIO      :";
         getch();
     }
 
@@ -254,9 +281,10 @@ void Registrar(){
 }
 
 void CargaMasiva(){
-
-
-    ifstream AJson("C:/Users/david/Desktop/json.json");
+    string documentos;
+    cout<<"NOMBRE DOCUMENTO";
+    cin>>documentos;
+    ifstream AJson(documentos);
     nlohmann::json  objeto= nlohmann::json::parse(AJson);
     int tusuario=objeto["usuarios"].size();
     int tarticulos=objeto["articulos"].size();

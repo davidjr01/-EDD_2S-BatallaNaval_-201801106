@@ -135,39 +135,38 @@ void LDobleUsuario::Mostrar(){
 }
 
 
-
 void LDobleUsuario::OrdenarAcendente(){
      NodoUsuario*aux=cabeza;
-      NodoUsuario*tem;
+      NodoUsuario*aux2;
 
     do{
-        tem = aux->siguiente;
-        while(tem!=cabeza){
-            if(aux->edad > tem->edad){
+        aux2 = aux->siguiente;
+        while(aux2!=cabeza){
+            if(aux->edad > aux2->edad){
 
-                        string tempn=aux->nick;
-                        aux->nick=tem->nick;
-                        tem->nick=tempn;
+                        string aux2pn=aux->nick;
+                        aux->nick=aux2->nick;
+                        aux2->nick=aux2pn;
 
-                        string tempp=aux->pass;
-                        aux->pass=tem->pass;
-                        tem->pass=tempp;
+                        string aux2pp=aux->pass;
+                        aux->pass=aux2->pass;
+                        aux2->pass=aux2pp;
 
-                        int tempe=aux->edad;
-                        aux->edad=tem->edad;
-                        tem->edad=tempe;
+                        int aux2pe=aux->edad;
+                        aux->edad=aux2->edad;
+                        aux2->edad=aux2pe;
 
-                        int tempm=aux->monedas;
-                        aux->monedas=tem->monedas;
-                        tem->monedas=tempm;
+                        int aux2pm=aux->monedas;
+                        aux->monedas=aux2->monedas;
+                        aux2->monedas=aux2pm;
 
 
             }
-            tem = tem->siguiente;
+            aux2 = aux2->siguiente;
         }
         aux = aux->siguiente;
-        tem = aux->siguiente;
-    }while(tem!=cabeza);
+        aux2 = aux->siguiente;
+    }while(aux2!=cabeza);
     aux = cabeza;
     do
         {
@@ -178,36 +177,36 @@ void LDobleUsuario::OrdenarAcendente(){
 
 void LDobleUsuario::OrdenarDes(){
      NodoUsuario*aux=cabeza;
-      NodoUsuario*tem;
+      NodoUsuario*aux2;
 
     do{
-        tem = aux->siguiente;
-        while(tem!=cabeza){
-            if(aux->edad < tem->edad){
+        aux2 = aux->siguiente;
+        while(aux2!=cabeza){
+            if(aux->edad < aux2->edad){
 
-                        string tempn=aux->nick;
-                        aux->nick=tem->nick;
-                        tem->nick=tempn;
+                        string aux2pn=aux->nick;
+                        aux->nick=aux2->nick;
+                        aux2->nick=aux2pn;
 
-                        string tempp=aux->pass;
-                        aux->pass=tem->pass;
-                        tem->pass=tempp;
+                        string aux2pp=aux->pass;
+                        aux->pass=aux2->pass;
+                        aux2->pass=aux2pp;
 
-                        int tempe=aux->edad;
-                        aux->edad=tem->edad;
-                        tem->edad=tempe;
+                        int aux2pe=aux->edad;
+                        aux->edad=aux2->edad;
+                        aux2->edad=aux2pe;
 
-                        int tempm=aux->monedas;
-                        aux->monedas=tem->monedas;
-                        tem->monedas=tempm;
+                        int aux2pm=aux->monedas;
+                        aux->monedas=aux2->monedas;
+                        aux2->monedas=aux2pm;
 
 
             }
-            tem = tem->siguiente;
+            aux2 = aux2->siguiente;
         }
         aux = aux->siguiente;
-        tem = aux->siguiente;
-    }while(tem!=cabeza);
+        aux2 = aux->siguiente;
+    }while(aux2!=cabeza);
     aux = cabeza;
     do
         {

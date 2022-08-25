@@ -36,12 +36,16 @@
 		</Compiler>
 		<Unit filename="include/LArticulo.h" />
 		<Unit filename="include/LCategoria.h" />
+		<Unit filename="include/LDPilas.h" />
 		<Unit filename="include/LDobleUsuario.h" />
 		<Unit filename="include/ListaTutorial.h" />
 		<Unit filename="include/NodoArticulo.h" />
 		<Unit filename="include/NodoCategoria.h" />
+		<Unit filename="include/NodoLPilas.h" />
+		<Unit filename="include/NodoPila.h" />
 		<Unit filename="include/NodoTutorial.h" />
 		<Unit filename="include/NodoUsuario.h" />
+		<Unit filename="include/Pila.h" />
 		<Unit filename="include/nlohmann/adl_serializer.hpp" />
 		<Unit filename="include/nlohmann/byte_container_with_subtype.hpp" />
 		<Unit filename="include/nlohmann/detail/abi_macros.hpp" />
@@ -89,9 +93,13 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="src/LArticulo.cpp" />
 		<Unit filename="src/LCategoria.cpp" />
+		<Unit filename="src/LDPilas.cpp" />
 		<Unit filename="src/LDobleUsuario.cpp" />
 		<Unit filename="src/ListaTutorial.cpp" />
+		<Unit filename="src/NodoLPilas.cpp" />
+		<Unit filename="src/NodoPila.cpp" />
 		<Unit filename="src/NodoTutorial.cpp" />
+		<Unit filename="src/Pila.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
