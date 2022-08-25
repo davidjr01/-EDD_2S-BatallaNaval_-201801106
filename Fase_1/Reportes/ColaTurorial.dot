@@ -2,20 +2,14 @@ digraph G {
 node[shape = box,width=0.7,height=0.7,fillcolor="white" color="black"  ]
 {rank=same;
 
-Nodos1[label=" X:10
-Y:30"]
-Nodos2[label=" X:1
-Y:6"]
-Nodos3[label=" X:3
-Y:9"]
-Nodos4[label=" X:5
-Y:1"]
-Nodos5[label=" X:5
-Y:8"]
-Nodos6[label=" X:6
-Y:3"]
-Nodos7[label=" X:0
+Nodos1[label=" X:250
+Y:125"]
+Nodos2[label=" X:3
 Y:0"]
-Nodos1->Nodos2->Nodos3->Nodos4->Nodos5->Nodos6->Nodos7
+Nodos3[label=" X:6
+Y:5"]
+Nodos4[label=" X:4
+Y:1"]
+Nodos1->Nodos2->Nodos3->Nodos4
 }
  }

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1661400858 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\main.cpp
+1661406153 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\main.cpp
 	<iostream>
 	<stdlib.h>
 	<conio.h>
@@ -12,6 +12,8 @@
 	"LCategoria.h"
 	"LArticulo.h"
 	"ListaTutorial.h"
+	"LDPilas.h"
+	"Pila.h"
 
 1661077086 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\nodousuario.cpp
 
@@ -482,7 +484,7 @@
 	<stddef.h>
 	"string"
 
-1661382447 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\lcategoria.cpp
+1661405279 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\lcategoria.cpp
 	"LCategoria.h"
 
 1661381321 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\lcategoria.h
@@ -534,7 +536,7 @@
 1661402328 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\nodolpilas.h
 	"Pila.h"
 
-1661401099 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\pila.h
+1661405896 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\pila.h
 	<stdlib.h>
 	<conio.h>
 	<string>
@@ -543,11 +545,11 @@
 	<fstream>
 	"NodoPila.h"
 
-1661402394 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\ldpilas.cpp
+1661405781 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\ldpilas.cpp
 	"LDPilas.h"
 	"NodoLPilas.h"
 
-1661402368 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\ldpilas.h
+1661405896 c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\include\ldpilas.h
 	<iostream>
 	<stdlib.h>
 	<conio.h>
@@ -559,7 +561,7 @@
 	"NodoLPilas.h"
 	"Pila.h"
 
-1661402428 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\pila.cpp
+1661405838 source:c:\users\david\desktop\-edd_2s-batallanaval_-201801106\fase_1\src\pila.cpp
 	"NodoPila.h"
 	"Pila.h"
 	<stddef.h>

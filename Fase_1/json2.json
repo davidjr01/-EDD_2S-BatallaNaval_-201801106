@@ -1,0 +1,28 @@
+{
+    "usuarios": [
+        { "nick": "david", "password": "123", "monedas": "10", "edad": "18" },
+        { "nick": "usuario1", "password": "123", "monedas": "0", "edad": "20" },
+  	{ "nick": "usuario2", "password": "123", "monedas": "0", "edad": "20" },
+ 	 { "nick": "usuario3", "password": "123", "monedas": "0", "edad": "20" },
+  	{ "nick": "usuario4", "password": "123", "monedas": "0", "edad": "20" },
+        { "nick": "usuario5", "password": "123", "monedas": "0", "edad": "17" }
+    ],
+    "articulos": [
+        { "id": "1", "categoria": "normal", "precio": "325", "nombre": "art1", "src": "url1.png" },
+        { "id": "2", "categoria": "legendario", "precio": "1000", "nombre": "art2", "src": "url2.png" },
+        { "id": "3", "categoria": "normal", "precio": "250", "nombre": "art3", "src": "url3.png" },
+        { "id": "4", "categoria": "legendario", "precio": "1000", "nombre": "art2", "src": "url2.png" },
+        { "id": "5", "categoria": "normal", "precio": "250", "nombre": "art3", "src": "url3.png" },
+        { "id": "6", "categoria": "legendario", "precio": "1000", "nombre": "art2", "src": "url2.png" },
+        { "id": "7", "categoria": "epico", "precio": "1000", "nombre": "art2", "src": "url2.png" }
+    ],
+    "tutorial": {
+        "ancho":"250",
+        "alto":"125",
+        "movimientos":[
+            { "x": "3", "y": "0" },
+            { "x": "6", "y": "5" },
+            { "x": "4", "y": "1" }
+        ]
+    }
+}

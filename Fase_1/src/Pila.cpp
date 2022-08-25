@@ -16,7 +16,7 @@ void Pila::Insertar(string jugada){
          tamanio+=1;
      }
 }
-void Pila::Mostrar(){
+/*void Pila::Mostrar(int a,string x){
     if(cabeza==NULL){
             cout<<"vacia"<<endl;
 
@@ -28,5 +28,31 @@ void Pila::Mostrar(){
             aux=aux->siguiente;
         }
     }
+}*/
+
+string  Pila::Mostrar(int id,string refs){
+    string contenido="";
+    string cNodos="";
+    string Cconecciones=refs+"->";
+    if(cabeza == NULL){
+
+    }else{
+        int c=0;
+        int cont=0;
+        NodoPila*aux=cabeza;
+        while(aux!=NULL){
+                cont+=1;
+                cNodos+="Nodos"+to_string(id)+to_string(cont)+"[label=\""+ aux->movimiento+"\"]\n";
+                if(aux->siguiente!=NULL){
+                    Cconecciones+="Nodos"+to_string(id)+to_string(cont)+"->";
+                }else{
+                    Cconecciones+="Nodos"+to_string(id)+to_string(cont);
+                }
+
+            aux=aux->siguiente;
+        }
+        contenido+="\n"+cNodos+Cconecciones+"\n";
+    }
+    return contenido;
 }
 

@@ -39,13 +39,13 @@ void LCategoria::Graficar(){
     while (NodoMostrar!=NULL){
 
             cont+=1;
-            cNodos+="Nodo"+to_string(cont)+"[label=\""+ NodoMostrar->categoria +"\""+"]\n";
-            nodos2+=NodoMostrar->lista->Graficar(cont,"Nodo"+to_string(cont));
+            cNodos+="NodoSA"+to_string(cont)+"[label=\""+ NodoMostrar->categoria +"\""+"]\n";
+            nodos2+=NodoMostrar->lista->Graficar(cont,"NodoSA"+to_string(cont));
             if(NodoMostrar->siguiente==NULL){
-                cConecciones+="Nodo"+to_string(cont);
+                cConecciones+="NodoSA"+to_string(cont);
             }else{
 
-                cConecciones+="Nodo"+to_string(cont)+"->";
+                cConecciones+="NodoSA"+to_string(cont)+"->";
             }
 
             NodoMostrar=NodoMostrar->siguiente;

@@ -47,7 +47,8 @@ void RealizarMovimientos();
 
 int main(){
 
-    RealizarMovimientos();
+
+    MenuPrimero();
 
     return 0;
 
@@ -75,6 +76,7 @@ void MenuPrimero(){
                     cout<<endl<<endl<<"ORDENADO DESCENDENTEMENE"<<endl<<endl;
                     Usuario2->OrdenarDes();
                     Usuario2->Mostrar();
+                    //Ldpilas->Mostrar();
 
 
 
@@ -227,8 +229,7 @@ void RealizarMovimientos(){/////////////////////////////////////////////////////
     string jugada;
     cin>>jugada;
     Ldpilas->Insertar(jugada,pila);
-    Ldpilas->Mostrar();
-
+    cout<<"MOVIMIENTOS GUARDADOS";
 
 }
 
@@ -249,7 +250,7 @@ void Logueado(){
             case 2: clear();EliminarUsuario(); getch(); break;
             case 3: clear();Tuturial(); break;
             case 4: clear();VerArticulo(); break;
-            case 5: break;
+            case 5: clear();RealizarMovimientos();break;
         }
 
 
