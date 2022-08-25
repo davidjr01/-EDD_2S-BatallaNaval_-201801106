@@ -33,6 +33,8 @@ class LDobleUsuario
         void Eliminar(string);
         bool Existe(string);
         int MMoneda(string);
+        void OrdenarAcendente();
+        void OrdenarDes();
 
     protected:
 

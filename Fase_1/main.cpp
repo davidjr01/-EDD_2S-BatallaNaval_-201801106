@@ -42,8 +42,8 @@ void Tuturial();
 
 
 int main(){
-    Tuturial();
-    //MenuPrimero();
+
+    MenuPrimero();
 
     return 0;
 
@@ -59,7 +59,24 @@ void MenuPrimero(){
             case 0: clear(); CargaMasiva(); getch(); break;
             case 1: clear();Registrar();  break;
             case 2: clear(); Login();/*Logueado();*/  break;
-            case 3: clear(); Lcategoria->Graficar();getch(); break;
+            case 3: {
+                    clear();
+                    LUsuario->Graficar();
+                    Lcategoria->Graficar();
+                    Ltutorial->Graficar();
+                    LDobleUsuario*Usuario2=LUsuario;//////////////////////////////////////////
+                    cout<<"ORDENADO ACENDENTEMENE"<<endl<<endl;
+                    Usuario2->OrdenarAcendente();
+                    Usuario2->Mostrar();
+                    cout<<endl<<endl<<"ORDENADO DESCENDENTEMENE"<<endl<<endl;
+                    Usuario2->OrdenarDes();
+                    Usuario2->Mostrar();
+
+
+
+                    getch();
+                    }break;
+
 
         }
     } while (op != 4);
@@ -79,11 +96,8 @@ void gotoxy(int x, int y){
     SetConsoleCursorPosition(hCon, dwPos);
 }
 void Tuturial(){
-    gotoxy(10,5);cout<<"TUTORIAL";
-    gotoxy(15,7);cout<<"Tablero";
-    gotoxy(20,8);cout<<"Ancho:";
-    gotoxy(20,9);cout<<"Alto:";
-    gotoxy(15,11);cout<<"Movimientos:";
+    Ltutorial->Mostrar();
+    getch();
 
 }
 
@@ -206,7 +220,7 @@ void Logueado(){
             switch (opcion){
             case 1: clear();ModificarUsuario(); getch(); break;
             case 2: clear();EliminarUsuario(); getch(); break;
-            case 3: clear();cout<<"tutorial"; break;
+            case 3: clear();Tuturial(); break;
             case 4: clear();VerArticulo(); break;
             case 5: break;
         }

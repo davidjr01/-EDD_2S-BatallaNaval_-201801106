@@ -134,6 +134,89 @@ void LDobleUsuario::Mostrar(){
     }
 }
 
+
+
+void LDobleUsuario::OrdenarAcendente(){
+     NodoUsuario*aux=cabeza;
+      NodoUsuario*tem;
+
+    do{
+        tem = aux->siguiente;
+        while(tem!=cabeza){
+            if(aux->edad > tem->edad){
+
+                        string tempn=aux->nick;
+                        aux->nick=tem->nick;
+                        tem->nick=tempn;
+
+                        string tempp=aux->pass;
+                        aux->pass=tem->pass;
+                        tem->pass=tempp;
+
+                        int tempe=aux->edad;
+                        aux->edad=tem->edad;
+                        tem->edad=tempe;
+
+                        int tempm=aux->monedas;
+                        aux->monedas=tem->monedas;
+                        tem->monedas=tempm;
+
+
+            }
+            tem = tem->siguiente;
+        }
+        aux = aux->siguiente;
+        tem = aux->siguiente;
+    }while(tem!=cabeza);
+    aux = cabeza;
+    do
+        {
+
+            aux = aux->siguiente;
+        } while (aux != cabeza);
+}
+
+void LDobleUsuario::OrdenarDes(){
+     NodoUsuario*aux=cabeza;
+      NodoUsuario*tem;
+
+    do{
+        tem = aux->siguiente;
+        while(tem!=cabeza){
+            if(aux->edad < tem->edad){
+
+                        string tempn=aux->nick;
+                        aux->nick=tem->nick;
+                        tem->nick=tempn;
+
+                        string tempp=aux->pass;
+                        aux->pass=tem->pass;
+                        tem->pass=tempp;
+
+                        int tempe=aux->edad;
+                        aux->edad=tem->edad;
+                        tem->edad=tempe;
+
+                        int tempm=aux->monedas;
+                        aux->monedas=tem->monedas;
+                        tem->monedas=tempm;
+
+
+            }
+            tem = tem->siguiente;
+        }
+        aux = aux->siguiente;
+        tem = aux->siguiente;
+    }while(tem!=cabeza);
+    aux = cabeza;
+    do
+        {
+
+            aux = aux->siguiente;
+        } while (aux != cabeza);
+}
+
+
 int LDobleUsuario::MMoneda(string nicks){
     int total=0;
 
